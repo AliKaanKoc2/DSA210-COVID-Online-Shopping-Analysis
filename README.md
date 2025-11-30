@@ -78,20 +78,20 @@ The datasets were downloaded in CSV format from Kaggle and stored in my project 
 ### **1️ - E-commerce Dataset (2018) **
 - **Content:** Product category, product purchase date, value of the product.
 - **Usage in Project:** It will provide a solid foundation to the pre-pandemic period and create a basis for comparison.
-- **Data:** `E-commerce Dataset.csv` [https://github.com/AliKaanKoc2/DSA210-COVID-Online-Shopping-Analysis/blob/main/data/unprocessed/E-commerce Dataset.csv]
+- **Data:** `E-commerce Dataset.csv` [https://github.com/AliKaanKoc2/DSA210-COVID-Online-Shopping-Analysis/blob/main/data/unprocessed/ E-commerce Dataset.csv]
 - **Source:** [https://www.kaggle.com/datasets/mervemenekse/ecommerce-dataset/discussion?sort=hotness]
   
 ### **2️ - Global Online Sales Dataset (2020–2025)**
 - **Content:** Product category, item purchase date, value of the product and country that it was purchased from, information about review.
 - **Usage in Project:** It will be a baseline for pandemic and post-pandemic period.
-- **Data:** `online_sales_dataset_for_2020-2025.csv` [https://github.com/AliKaanKoc2/DSA210-COVID-Online-Shopping-Analysis/blob/main/online_sales_dataset_for_2020-2025.csv]
+- **Data:** `online_sales_dataset_for_2020-2025.csv` [https://github.com/AliKaanKoc2/DSA210-COVID-Online-Shopping-Analysis/blob/main/data/unprocessed/ online_sales_dataset_for_2020-2025.csv]
 - **Source:** [https://www.kaggle.com/datasets/yusufdelikkaya/online-sales-dataset]
 
 ### **3️ - COVID-19 Lockdown Policy Dataset**
 - **Content:** Contains every countries case count, the strictness of the lockdown, the specific dates of the lockdown for all countries.
 - **Key Variable:** A binary (0-1) variable `is_lockdown` will be created and included in the merged csv files.
 - **Usage in Project:** The created variable will show the dates when the country had a lockdown.
-- **Data:** `covid_policy-lockdown_tracker.csv` [https://github.com/AliKaanKoc2/DSA210-COVID-Online-Shopping-Analysis/blob/main/covid_policy-lockdown_tracker.csv]
+- **Data:** `covid_policy-lockdown_tracker.csv` [https://github.com/AliKaanKoc2/DSA210-COVID-Online-Shopping-Analysis/blob/main/data/unprocessed/ covid_policy-lockdown_tracker.csv]
 - **Source:** [https://github.com/OxCGRT/covid-policy-tracker/blob/master/data/OxCGRT_nat_latest.csv]
 
 ---
