@@ -109,6 +109,11 @@ I will use various graphics like box plots, time series analysis, histograms, he
 I will use Mann–Whitney U and Kruskal–Wallis test to find if the evidence we have is significant enough to reject Null Hypothesis. In our code we saw that p value is e-6 so we can reject null hypothesis
 
 ---
+
+### Methodology
+In this project, I compare shopping behavior across the pre-COVID, during-COVID, and post-COVID periods. My general approach is to first clean and merge all datasets into one consistent structure, then create new variables like Period, Order_Value, and is_lockdown. After preparing the data, I analyze the changes between the three periods using descriptive statistics, visualizations, and statistical tests. This way I can evaluate how shopping habits shifted over time and whether the differences are statistically meaningful.
+
+---
 ## Expected Outcomes 
 - I expect that shopping trends will increase immensely compared to the pre-pandemic period, especially in categories linked to essential needs such as groceries and household products. Additionally, the alteration in human shopping habits will keep them making general purchases more compared to pre-Covid period.
 
