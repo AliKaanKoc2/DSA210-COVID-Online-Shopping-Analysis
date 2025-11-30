@@ -93,14 +93,20 @@ The datasets were downloaded in CSV format from Kaggle and stored in my project 
 - **Usage in Project:** The created variable will show the dates when the country had a lockdown.
 - **Data:** `covid_policy-lockdown_tracker.csv` [https://github.com/AliKaanKoc2/DSA210-COVID-Online-Shopping-Analysis/blob/main/data/unprocessed/covid_policy-lockdown_tracker.csv]
 - **Source:** [https://github.com/OxCGRT/covid-policy-tracker/blob/master/data/OxCGRT_nat_latest.csv]
+  
 
-
+---
 ### Data analysis
 After gathering these 3 datasets, I will use data cleaning steps to shape them into a consisten usable format. The goal is to drop the variables that are not relevant or empty and merge the parameters I need into a final dataset to conduct EDA later on.
 
-The cleaning steps included droping irrelevant rows, unusable or dataset-specific metrics like customerID, selecting essential columns like date, product category, product price, quantities.
+1- The cleaning steps included droping irrelevant rows, unusable or dataset-specific metrics like customerID, selecting essential columns like date, product category, product price, quantities.
 Some datasets used different names for the same variable like product_category and category, while merging I changed the names of the columns so that when we conduct analysis the code won't treat them like different individuals. After that, I merged the datasets consecutively based on their dates and sorted the final dataset to ensure it was in proper chronological order.
 
+2- EDA : In this part we will use exploratory data analysis to summarize patterns, describe the data and find relationship between different metrics.
+I will use various graphics like box plots, time series analysis, histograms, heatmaps, line-plots to either describe the data or search for paterns/relationships.
+
+3-Hypothesis testing
+I will use Mann–Whitney U and Kruskal–Wallis test to find if the evidence we have is significant enough to reject Null Hypothesis. In our code we saw that p value is e-6 so we can reject null hypothesis
 
 ---
 ## Expected Outcomes 
