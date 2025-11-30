@@ -75,11 +75,11 @@ The datasets were downloaded in CSV format from Kaggle and stored in my project 
 
 ---
 ## Data Sources 
-### **1️ - Global Online Sales Dataset (2019)**
-- **Content:** Product category, product purchase date, value of the product and country that it was purchased from.
-- **Usage in Project:** It will provide a solid foundation to the pre-pandemic period.
-- **Data:** `online_sales_dataset_for_2019.csv` [https://github.com/AliKaanKoc2/DSA210-COVID-Online-Shopping-Analysis/blob/main/online_sales_dataset_for_2019.csv]
-- **Source:** [https://www.kaggle.com/datasets/jacksondivakarr/online-shopping-dataset]
+### **1️ - E-commerce Dataset (2018) **
+- **Content:** Product category, product purchase date, value of the product.
+- **Usage in Project:** It will provide a solid foundation to the pre-pandemic period and create a basis for comparison.
+- **Data:** `E-commerce Dataset.csv` [https://github.com/AliKaanKoc2/DSA210-COVID-Online-Shopping-Analysis/blob/main/data/unprocessed/E-commerce Dataset.csv]
+- **Source:** [https://www.kaggle.com/datasets/mervemenekse/ecommerce-dataset/discussion?sort=hotness]
   
 ### **2️ - Global Online Sales Dataset (2020–2025)**
 - **Content:** Product category, item purchase date, value of the product and country that it was purchased from, information about review.
