@@ -19,44 +19,44 @@
 ---
 
 ## Overview 
-This project examines the impact of the COVID-19 pandemic on global online shopping practices, mainly focusing on fluctuations in purchasing behavior across various product categories. By analyzing daily purchase counts and products prices, i expect to understand how consumer behavior shifted during the pandemic period. The comparison between pre-pandemic, pandemic and post-pandemic periods will show if the lockdowns were one of the leading reasons why people started shopping online on a greater scale, and if the shift and the scale remained the same after the lockdowns were lifted.
+This project examines the impact of the COVID-19 pandemic on global shopping practices, mainly focusing on fluctuations in purchasing behavior across various product categories. By analyzing daily purchase counts and products prices, i expect to understand how consumer behavior shifted during the pandemic period. The comparison between pre-pandemic, pandemic and post-pandemic periods will show if the lockdowns were one of the leading reasons why people started shopping on a greater scale, and if the shift and the scale remained the same after the lockdowns were lifted.
 
 ---
 ## Motivation 
 
-As a data science student, I am interested in how major global events influence online shopping habits and everyday decision-making. The COVID-19 pandemic created one of the most significant shifts in consumer habits,which increased online shopping dependence.Like many households, mine also began relying heavily on digital platforms for both essential and non-essential purchases during lockdown periods. Studying this shift will help me explore how consumer preferences change under disruptive conditions using data-driven analysis.
+As a data science student, I am interested in how major global events influence shopping habits and everyday decision-making. The COVID-19 pandemic created one of the most significant shifts in consumer habits,which increased shopping dependence.Like many households, mine also began relying heavily on digital platforms for both essential and non-essential purchases during lockdown periods. Studying this shift will help me explore how consumer preferences change under disruptive conditions using data-driven analysis.
 
 ---
 ## Research Question & Sub-Questions 
 
 **Research Question:**
 
-- How did global online shopping demand and category-level purchasing behavior change across the pre-pandemic, pandemic, and post-pandemic periods of COVID-19?
+- How did global shopping demand and category-level purchasing behavior change across the pre-pandemic, pandemic, and post-pandemic periods of COVID-19?
 
 
 **Sub-Questions**
-- Did online shopping demand rise significantly during the pandemic compared to the pre-pandemic period?
+- Did shopping demand rise significantly during the pandemic compared to the pre-pandemic period?
 - Which product categories experienced the strongest changes in daily demand during lockdown restrictions?
-- Do lockdown restrictions lead to noticeable changes in daily online shopping demand?
-- Did online demand remain permanently above pre-pandemic levels after restrictions were lifted?
+- Do lockdown restrictions lead to noticeable changes in daily shopping demand?
+- Did demand remain permanently above pre-pandemic levels after restrictions were lifted?
 
 ---
 
 ## Hypothesis 
 
 **Null Hypothesis (H₀)**
-There is no significant difference in daily online shopping demand between the pre-pandemic and pandemic periods.
+There is no significant difference in daily shopping demand between the pre-pandemic and pandemic periods.
 
 **Alternative Hypothesis (H₁)**  
-Daily online shopping demand increased significantly during the pandemic compared to the pre-pandemic period.
+Daily shopping demand increased significantly during the pandemic compared to the pre-pandemic period.
 
 A statistical significance threshold of α = 0.05 will be used when evaluating the p-value for hypothesis testing.
 
 ---
 
 ## Project Goal 
-The project investigates how the COVID-19 pandemic changed the way people buy products on online platforms globally, especially which types of categories products people bought more and how this varied from country to country.
-I also look at how lockdown restrictions affected the scale of online purchases and if people kept shopping online more often even though the restriction were lifted.
+The project investigates how the COVID-19 pandemic changed the way people buy products on platforms globally, especially which types of categories products people bought more and how this varied from country to country.
+I also look at how lockdown restrictions affected the scale of purchases and if people kept shopping online more often even though the restriction were lifted.
 
 ---
 
@@ -96,5 +96,5 @@ The datasets were downloaded in CSV format from Kaggle and stored in my project 
 
 ---
 ## Expected Outcomes 
-- I expect that online shopping trends will increase immensely compared to the pre-pandemic period, especially in categories linked to essential needs such as groceries and household products. Additionally, the alteration in human shopping habits will keep them making online purchases more compared to pre-Covid period.
+- I expect that shopping trends will increase immensely compared to the pre-pandemic period, especially in categories linked to essential needs such as groceries and household products. Additionally, the alteration in human shopping habits will keep them making general purchases more compared to pre-Covid period.
 
