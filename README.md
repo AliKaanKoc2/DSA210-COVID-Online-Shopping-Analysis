@@ -1,4 +1,4 @@
-# DSA210 Individual Project: COVID-19 Government Policies & Human Mobility
+# DSA210 Individual Project: Analysis of COVID-19 Government Policies & Human Mobility
 
 **DSA210 Individual Project - Fall 2025-2026 - Sabancı University**
 
@@ -9,12 +9,13 @@
 ## Contents
 1. [Overview](#overview)
 2. [Motivation](#motivation)
-3. [Research Question & Sub-Questions](#research-question--sub-questions)
-4. [Hypothesis](#hypothesis)
+3. [Research Question](#research-question)
+4. [Hypotheses](#hypotheses)
 5. [Project Goal](#project-goal)
 6. [Data Collection](#data-collection)
 7. [Data Sources](#data-sources)
-8. [Expected Outcomes](#expected-outcomes)
+8. [Methodology](#methodology)
+9. [Expected Outcomes](#expected-outcomes)
    
 ---
 
