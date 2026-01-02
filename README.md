@@ -1,4 +1,4 @@
-# DSA210 Individual Project: Analysis of the Impact of COVID-19 on Online Shopping Behavior and Product Category Demand
+# DSA210 Individual Project: COVID-19 Government Policies & Human Mobility
 
 **DSA210 Individual Project - Fall 2025-2026 - Sabancı University**
 
@@ -19,44 +19,52 @@
 ---
 
 ## Overview 
-This project examines the impact of the COVID-19 pandemic on global shopping practices, mainly focusing on fluctuations in purchasing behavior across various product categories. By analyzing daily purchase counts and products prices, i expect to understand how consumer behavior shifted during the pandemic period. The comparison between pre-pandemic, pandemic and post-pandemic periods will show if the lockdowns were one of the leading reasons why people started shopping on a greater scale, and if the shift and the scale remained the same after the lockdowns were lifted.
+This project analyzes how COVID-19 government policy measures affected human mobility patterns across 11 countries, using data from the OXFORD COVID-19 Government Response Tracker(OxCGRT) and Google Community Mobility Reports. The analysis covers February 2020 through January 2021 and examines mobility across multiple sectors such as workplace,parks,retail,residential,transit in order to understand how populations responded to government restrictions and strict rules they enforced.
 
 ---
 ## Motivation 
 
-As a data science student, I am interested in how major global events influence shopping habits and everyday decision-making. The COVID-19 pandemic created one of the most significant shifts in consumer habits,which increased shopping dependence.Like many households, mine also began relying heavily on digital platforms for both essential and non-essential purchases during lockdown periods. Studying this shift will help me explore how consumer preferences change under disruptive conditions using data-driven analysis.
+As a data science student,I am interested in how government decisions translate into behavioral changes among the human population. The COVID-19 pandemic created an unprecedented large-scale natural experiment in which the governments worldwide implemented varying levels of restrictions, and populations responded differently.
+Did people comply with orders because they were told to obey them, or because they were scared? I wanted to use data to explore the shift of human behavior.
 
 ---
-## Research Question & Sub-Questions 
+## Research Question
 
 **Research Question:**
 
-- How did global shopping demand and category-level purchasing behavior change across the pre-pandemic, pandemic, and post-pandemic periods of COVID-19?
-
-
-**Sub-Questions**
-- Did shopping demand rise significantly during the pandemic compared to the pre-pandemic period?
-- Which product categories experienced the strongest changes in daily demand during lockdown restrictions?
-- Do lockdown restrictions lead to noticeable changes in daily shopping demand?
-- Did demand remain permanently above pre-pandemic levels after restrictions were lifted?
+- How did government COVID-19 policy measures affect human mobility patterns, and did these relationships vary across countries, mobility sectors, and pandemic phases?
 
 ---
 
-## Hypothesis 
+## Hypotheses
 
-**Null Hypothesis (H₀)**
-There is no significant difference in daily shopping demand between the pre-pandemic and pandemic periods.
+**H1 — Policy-Mobility Association**  
 
-**Alternative Hypothesis (H₁)**  
-Daily shopping demand increased significantly during the pandemic compared to the pre-pandemic period.
+**Null Hypothesis (H₀):** There is no significant correlation between government policy stringency and mobility changes.  
+**Alternative Hypothesis (H₁):** Government policies and mobility are significantly correlated.
 
-A statistical significance threshold of α = 0.05 will be used when evaluating the p-value for hypothesis testing.
+**H2 — Sector Spillover**  
+
+**Null Hypothesis (H₀):** Mobility sectors respond independently to policies.  
+**Alternative Hypothesis (H₁):** Mobility sectors move together (spillover behavior).
+
+**H3 — Cross-Country Variation**  
+
+**Null Hypothesis (H₀):** Policy-mobility relationships are consistent across countries.  
+**Alternative Hypothesis (H₁):** Policy-mobility relationships differ significantly across countries.
+
+**H4 — Temporal Weakening**  
+
+**Null Hypothesis (H₀):** Policy-mobility relationships remain constant across pandemic phases.  
+**Alternative Hypothesis (H₁):** Relationships weaken over time (behavioral adaptation).
+
+A statistical significance threshold of α = 0.05 was used when evaluating p-values for hypothesis testing.
 
 ---
 
 ## Project Goal 
-The project investigates how the COVID-19 pandemic changed the way people buy products on platforms globally, especially which types of categories products people bought more and how this varied from country to country.
-I also look at how lockdown restrictions affected the scale of purchases and if people kept shopping online more often even though the restriction were lifted.
+
+The goal of this project is to investigate how COVID-19 government restrictions affected human mobility patterns across different countries and sectors. Beyond visual exploration, the project aims to statistically validate policy-mobility relationships, use machine learning to predict mobility drops from policy indicators, and identify behavioral response clusters among countries.
 
 ---
 
@@ -65,55 +73,60 @@ I also look at how lockdown restrictions affected the scale of purchases and if 
 For this project, I collected the data from numerous publicly available sources to create a large and reliable dataset. Below, I explain the steps of my data collection process in detail:
 
 **1 - Looking for Relevant Data:**
-I searched multiple open data platforms for datasets on online sales and pandemic-related policies, using keywords like “online sales” and “COVID-19 lockdown data” to guide the process.
+I searched multiple open data platforms for datasets on pandemic-related policies and mobility data during pandemic, using keywords like “behavior shift”, "mobility" and “COVID-19 lockdown data” to guide the process.
 
 **2 - Selecting Usefull Datasets:**
-I focused on datasets that provided daily purchase activity, product category and country details during the analysis period. In order to connect shopping patterns with COVID-19 period, I also included a global pandemic dataset that shows the date range of lockdowns.
+I focused on datasets that provided daily observations, country-level detail and could be merged by **date** and **country_code**. The Oxford COVID-19 Government Response Tracker offered policy indicators (C1–C8, stringency index), while Google Community Mobility Reports provided sector-level mobility changes.
 
 **3 - Downloading and Storing Data:**
-The datasets were downloaded in CSV format from Kaggle and stored in my project repository. All of the necessary files will be cleaned and merged in the future.
+The dataset were downloaded in CSV format. The original Google Mobility dataset exceeded 1GB, so only relevant countries and variables were extracted. All files were cleaned and merged in the data cleaning notebook.
 
 ---
 ## Data Sources 
-### ** 1 - E-commerce Dataset (2018) **
-- **Content:** Product category, product purchase date, value of the product.
-- **Usage in Project:** It will provide a solid foundation to the pre-pandemic period and create a basis for comparison.
-- **Data:** `E-commerce Dataset.csv` [https://github.com/AliKaanKoc2/DSA210-COVID-Online-Shopping-Analysis/blob/main/data/unprocessed/E-commerce%20Dataset.csv]
-- **Source:** [https://www.kaggle.com/datasets/mervemenekse/ecommerce-dataset/discussion?sort=hotness]
+### **1 - Google Community Mobility Reports**
+- **Content:** Dail percentage changes in visits to places compared to baseline, across six sectors: workplaces, retail & recreation, grocery & pharmacy, transit stations, parks, and residential.
+- **Usage in Project:** Provides mobility data to measure how human behavior shifted during the pandemic.
+- **Data:** `mobility_12_countries.csv`[https://github.com/AliKaanKoc2/DSA210-COVID-Online-Shopping-Analysis/blob/main/data/unprocessed/mobility_12_countries.csv]
+- **Source:** [[https://www.google.com/covid19/mobility/](https://www.google.com/covid19/mobility/](https://www.google.com/covid19/mobility/)]
   
-### ** 2 - Global Online Sales Dataset (2020–2025)**
-- **Content:** Product category, item purchase date, value of the product and country that it was purchased from, information about review.
-- **Usage in Project:** It will be a baseline for pandemic and post-pandemic period.
-- **Data:** `online_sales_dataset_for_2020-2025.csv` [https://github.com/AliKaanKoc2/DSA210-COVID-Online-Shopping-Analysis/blob/main/data/unprocessed/online_sales_dataset_for_2020-2025.csv]
-- **Source:** [https://www.kaggle.com/datasets/yusufdelikkaya/online-sales-dataset]
-
-### ** 3 - COVID-19 Lockdown Policy Dataset**
-- **Content:** Contains every countries case count, the strictness of the lockdown, the specific dates of the lockdown for all countries.
-- **Key Variable:** A binary (0-1) variable `is_lockdown` will be created and included in the merged csv files.
-- **Usage in Project:** The created variable will show the dates when the country had a lockdown.
+### **2 - COVID-19 Lockdown Policy Dataset**
+- **Content:** Daily policy indicators (C1–C8) covering school closures, workplace closures, public event cancellations, gathering restrictions, public transport closures, stay-at-home requirements, internal movement restrictions, and international travel controls. Also includes a composite stringency index.
+- **Usage in Project:** Provides government policy data to analyze relationships with mobility changes.
 - **Data:** `covid_policy-lockdown_tracker.csv` [https://github.com/AliKaanKoc2/DSA210-COVID-Online-Shopping-Analysis/blob/main/data/unprocessed/covid_policy-lockdown_tracker.csv]
 - **Source:** [https://github.com/OxCGRT/covid-policy-tracker/blob/master/data/OxCGRT_nat_latest.csv]
   
 
 ---
 ### Data analysis
-After gathering these 3 datasets, I will use data cleaning steps to shape them into a consisten usable format. The goal is to drop the variables that are not relevant or empty and merge the parameters I need into a final dataset to conduct EDA later on.
+After gathering these 2 datasets, I will use data cleaning steps to shape them into a consistent usable format. The goal is to drop the columns that are not relevant or empty and merge the parameters I need into a final dataset to conduct EDA later on.
 
-1- The cleaning steps included droping irrelevant rows, unusable or dataset-specific metrics like customerID, selecting essential columns like date, product category, product price, quantities.
-Some datasets used different names for the same variable like product_category and category, while merging I changed the names of the columns so that when we conduct analysis the code won't treat them like different individuals. After that, I merged the datasets consecutively based on their dates and sorted the final dataset to ensure it was in proper chronological order.
+1 - The cleaning steps included dropping irrelevant columns, fixing corrupted Excel-formatted dates, selecting essential variables (date, country, mobility sectors, policy indicators), and handling missing values. The policy and mobility datasets were merged by country and date into a single working dataset: `covid_merged_final.csv`.
 
-2- EDA : In this part we will use exploratory data analysis to summarize patterns, describe the data and find relationship between different metrics.
-I will use various graphics like box plots, time series analysis, histograms, heatmaps, line-plots to either describe the data or search for paterns/relationships.
+2 - Exploratory Data Analysis : EDA was used to summarize patterns and explore relationships between policy stringency and mobility across sectors. Visualizations included time series plots, scatter plots, heatmaps, and cross-country comparisons to identify trends before statistical testing.
 
-3-Hypothesis testing
-I will use Mann–Whitney U and Kruskal–Wallis test to find if the evidence we have is significant enough to reject Null Hypothesis. In our code we saw that p value is e-6 so we can reject null hypothesis
+3 - Hypothesis testing
+Spearman and Kendall correlation tests were used to evaluate H1–H4. These non-parametric tests were chosen because the data did not assume normal distribution.
+
+4 — Machine Learning:
+Supervised learning (Linear Regression, Lasso, Random Forest) was used to predict mobility from policy indicators. Classification models detected large mobility drops. K-Means clustering identified policy-response behavioral groups across countries. 
 
 ---
 
-### Methodology
-In this project, I compare shopping behavior across the pre-COVID, during-COVID, and post-COVID periods. My general approach is to first clean and merge all datasets into one consistent structure, then create new variables like Period, Order_Value, and is_lockdown. After preparing the data, I analyze the changes between the three periods using descriptive statistics, visualizations, and statistical tests. This way I can evaluate how shopping habits shifted over time and whether the differences are statistically meaningful.
+## Methodology
+
+This project treats the COVID-19 pandemic as a natural experiment—different countries implemented different policies, and mobility data shows how people actually responded.
+
+The analysis follows three stages:
+
+**EDA:** I visualized mobility trends, compared countries, and looked at how sectors moved together. This helped me form hypotheses before testing them.
+
+**Hypothesis Testing:** I used Spearman and Kendall correlation tests to validate policy-mobility relationships. I tested globally, by country, by sector, and across time periods to see where relationships hold and where they break down.
+
+**Machine Learning:** I used regression to predict mobility from policy indicators, classification to detect large drops, and clustering to find behavioral groups. For supervised models, I used a time-aware split (train on early months, test on later) to avoid leakage.
+
+The goal is to find statistical associations—not prove causation, since this is observational data.
 
 ---
 ## Expected Outcomes 
-- I expect that shopping trends will increase immensely compared to the pre-pandemic period, especially in categories linked to essential needs such as groceries and household products. Additionally, the alteration in human shopping habits will keep them making general purchases more compared to pre-Covid period.
+- I expect that stronger government policies will be associated with larger mobility drops, especially in workplace and transit sectors. However, since people naturally resist being confined for long periods, I think compliance will weaken over time and mobility will start recovering even under restrictions. I also expect different countries to react on a diverse scale since every country has different culture, compliance norms, and trust in government.
 
