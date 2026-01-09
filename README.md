@@ -96,9 +96,17 @@ The dataset were downloaded in CSV format. The original Google Mobility dataset 
 ### **2 - COVID-19 Lockdown Policy Dataset**
 - **Content:** Daily policy indicators (C1–C8) covering school closures, workplace closures, public event cancellations, gathering restrictions, public transport closures, stay-at-home requirements, internal movement restrictions, and international travel controls. Also includes a composite stringency index.
 - **Usage in Project:** Provides government policy data to analyze relationships with mobility changes.
-- **Data:** `covid_policy-lockdown_tracker.csv` [https://github.com/AliKaanKoc2/DSA210-COVID-Online-Shopping-Analysis/blob/main/data/unprocessed/covid_policy-lockdown_tracker.csv]
-- **Source:** [https://github.com/OxCGRT/covid-policy-tracker/blob/master/data/OxCGRT_nat_latest.csv]
-  
+- **Source:** [OxCGRT GitHub Repository](https://github.com/OxCGRT/covid-policy-dataset)
+
+| Indicator | Policy Name | Index Scale / Meaning |
+| :--- | :--- | :--- |
+| **C1** | **School Closing** | `0` - No measures <br> `1` - Recommend closing <br> `2` - Require closing (some levels) <br> `3` - Require closing (all levels) |
+| **C2** | **Workplace Closing** | `0` - No measures <br> `1` - Recommend closing (or work from home) <br> `2` - Require closing (for some sectors) <br> `3` - Require closing (for all-but-essential) |
+| **C3** | **Cancel Public Events** | `0` - No measures <br> `1` - Recommend cancelling <br> `2` - Require cancelling |
+| **C4** | **Gathering Restrictions** | `0` - No restrictions <br> `1` - Restrictions on >1000 people <br> `2` - Restrictions on 100-1000 people <br> `3` - Restrictions on 10-100 people <br> `4` - Restrictions on <10 people |
+| **C5** | **Close Public Transport** | `0` - No measures <br> `1` - Recommend closing (or reduce volume) <br> `2` - Require closing (or prohibit use) |
+| **C6** | **Stay at Home** | `0` - No measures <br> `1` - Recommend not leaving house <br> `2` - Require not leaving house (with exceptions) <br> `3` - Require not leaving house (minimal exceptions) |
+| **E1** | **Income Support** | `0` - No income support <br> `1` - Government replaces <50% of lost salary <br> `2` - Government replaces >50% of lost salary |
 
 ---
 ### Data analysis
