@@ -90,8 +90,21 @@ The dataset were downloaded in CSV format. The original Google Mobility dataset 
 ### **1 - Google Community Mobility Reports**
 - **Content:** Dail percentage changes in visits to places compared to baseline, across six sectors: workplaces, retail & recreation, grocery & pharmacy, transit stations, parks, and residential.
 - **Usage in Project:** Provides mobility data to measure how human behavior shifted during the pandemic.
-- **Data:** `mobility_12_countries.csv`[https://github.com/AliKaanKoc2/DSA210-COVID-Online-Shopping-Analysis/blob/main/data/unprocessed/mobility_12_countries.csv]
-- **Source:** [[https://www.google.com/covid19/mobility/](https://www.google.com/covid19/mobility/](https://www.google.com/covid19/mobility/)]
+- **Source:** [Google Community Mobility Reports](https://www.google.com/covid19/mobility/)
+
+| Category | Description |
+| :--- | :--- |
+| **Retail & Recreation** | Places like restaurants, cafes, shopping centers, theme parks, museums, libraries, and movie theaters. |
+| **Grocery & Pharmacy** | Places like grocery markets, food warehouses, farmers markets, specialty food shops, drug stores, and pharmacies. |
+| **Parks** | National parks, public beaches, marinas, dog parks, plazas, and public gardens. |
+| **Transit Stations** | Public transport hubs such as subway, bus, and train stations. |
+| **Workplaces** | Places of work. |
+| **Residential** | Places of residence. |
+
+> **Note on Interpretation:**
+> * **Negative values** (e.g., `-30%`) indicate a **decrease** in activity compared to the baseline.
+> * **Positive values** (e.g., `+10%`) indicate an **increase** in activity.
+> * *Residential* usually shows positive values during lockdowns (people staying home), while other categories show negative values.
   
 ### **2 - COVID-19 Lockdown Policy Dataset**
 - **Content:** Daily policy indicators (C1–C8) covering school closures, workplace closures, public event cancellations, gathering restrictions, public transport closures, stay-at-home requirements, internal movement restrictions, and international travel controls. Also includes a composite stringency index.
