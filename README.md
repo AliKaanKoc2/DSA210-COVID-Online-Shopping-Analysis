@@ -23,7 +23,7 @@ Prepared by : Ali Kaan Koç - 33832
 ---
 
 ## Overview 
-This project analyzes how COVID-19 government policy measures affected human mobility patterns across 11 countries, using data from the OXFORD COVID-19 Government Response Tracker(OxCGRT) and Google Community Mobility Reports. The analysis covers February 2020 through January 2021 and examines mobility across multiple sectors such as workplace,parks,retail,residential,transit in order to understand how populations responded to government restrictions and strict rules they enforced.
+This project analyzes how COVID-19 government policy measures affected human mobility patterns across 11 countries (countries are selected based on the quality of their data, which are mostly consist of European countries), using data from the OXFORD COVID-19 Government Response Tracker(OxCGRT) and Google Community Mobility Reports. The analysis covers February 2020 through January 2021 and examines mobility across multiple sectors such as workplace,parks,retail,residential,transit in order to understand how populations responded to government restrictions and strict rules they enforced.
 
 ---
 ## Motivation 
@@ -91,6 +91,7 @@ The dataset were downloaded in CSV format. The original Google Mobility dataset 
 - **Content:** Dail percentage changes in visits to places compared to baseline, across six sectors: workplaces, retail & recreation, grocery & pharmacy, transit stations, parks, and residential.
 - **Usage in Project:** Provides mobility data to measure how human behavior shifted during the pandemic.
 - **Source:** [Google Community Mobility Reports](https://www.google.com/covid19/mobility/)
+- **Comment about this dataset->** (since the real datasets was over 1Gb i couldn't manage to upload it to the repository)(github upload limit) / I uploaded the reducted one with needed countries.
 
 | Category | Description |
 | :--- | :--- |
