@@ -162,6 +162,7 @@ The goal is to find statistical associations—not prove causation, since this i
 3. Policy effects weakened from Phase 1 to Phase 3 (pandemic fatigue)
 4. Some countries reduced mobility voluntarily before strict mandates
 5. ***Bottom line:*** Policies matter, but people are more complex than what models can fully capture.
+6. 📄 **[Read the Full Final Report (PDF)](DSA210_FINAL_REPORT.pdf)**
 ---
 
 ## Limitations
