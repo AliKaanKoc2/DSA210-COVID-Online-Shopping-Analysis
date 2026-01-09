@@ -13,7 +13,7 @@
 4. [Hypotheses](#hypotheses)
 5. [Project Goal](#project-goal)
 6. [Data Collection](#data-collection)
-7. [Data Sources](#data-sources)
+7. [Data Sources and Description](#data-sources-and-description)
 8. [Methodology](#methodology)
 9. [Expected Outcomes](#expected-outcomes)
 10. [Key Findings](#key-findings)
@@ -86,7 +86,7 @@ I focused on datasets that provided daily observations, country-level detail and
 The dataset were downloaded in CSV format. The original Google Mobility dataset exceeded 1GB, so only relevant countries and variables were extracted. All files were cleaned and merged in the data cleaning notebook.
 
 ---
-## Data Sources 
+## Data Sources and Description
 ### **1 - Google Community Mobility Reports**
 - **Content:** Dail percentage changes in visits to places compared to baseline, across six sectors: workplaces, retail & recreation, grocery & pharmacy, transit stations, parks, and residential.
 - **Usage in Project:** Provides mobility data to measure how human behavior shifted during the pandemic.
@@ -144,7 +144,7 @@ The goal is to find statistical associations—not prove causation, since this i
 ---
 
 ## Key Findings
-1. All four hypotheses supported (p < 0.05)
+1. All four hypotheses supported (p < 0.05), meaning that there is significant evidence for accepting the fact that stronger government policies affect human mobility among various countries.
 2. Policies explain ~24% of mobility variation (R² ≈ 0.24)
 3. Policy effects weakened from Phase 1 to Phase 3 (pandemic fatigue)
 4. Some countries reduced mobility voluntarily before strict mandates
