@@ -16,6 +16,9 @@
 7. [Data Sources](#data-sources)
 8. [Methodology](#methodology)
 9. [Expected Outcomes](#expected-outcomes)
+10. [Key Findings](#key-findings)
+11. [Limitations](#limitations)
+12. [Future Work](#future-work)
    
 ---
 
@@ -42,22 +45,22 @@ Did people comply with orders because they were told to obey them, or because th
 **H1 — Policy-Mobility Association**  
 
 **Null Hypothesis (H₀):** There is no significant correlation between government policy stringency and mobility changes.  
-**Alternative Hypothesis (H₁):** Government policies and mobility are significantly correlated.
+**Alternative Hypothesis (H₁):** Government policies and mobility are significantly correlated. ***Supported*** ✅
 
 **H2 — Sector Spillover**  
 
 **Null Hypothesis (H₀):** Mobility sectors respond independently to policies.  
-**Alternative Hypothesis (H₁):** Mobility sectors move together (spillover behavior).
+**Alternative Hypothesis (H₁):** Mobility sectors move together (spillover behavior). ***Supported*** ✅
 
 **H3 — Cross-Country Variation**  
 
 **Null Hypothesis (H₀):** Policy-mobility relationships are consistent across countries.  
-**Alternative Hypothesis (H₁):** Policy-mobility relationships differ significantly across countries.
+**Alternative Hypothesis (H₁):** Policy-mobility relationships differ significantly across countries. ***Supported*** ✅
 
 **H4 — Temporal Weakening**  
 
 **Null Hypothesis (H₀):** Policy-mobility relationships remain constant across pandemic phases.  
-**Alternative Hypothesis (H₁):** Relationships weaken over time (behavioral adaptation).
+**Alternative Hypothesis (H₁):** Relationships weaken over time (behavioral adaptation). ***Supported*** ✅
 
 A statistical significance threshold of α = 0.05 was used when evaluating p-values for hypothesis testing.
 
@@ -123,11 +126,26 @@ The analysis follows three stages:
 
 **Hypothesis Testing:** I used Spearman and Kendall correlation tests to validate policy-mobility relationships. I tested globally, by country, by sector, and across time periods to see where relationships hold and where they break down.
 
-**Machine Learning:** I used regression to predict mobility from policy indicators, classification to detect large drops, and clustering to find behavioral groups. For supervised models, I used a time-aware split (train on early months, test on later) to avoid leakage.
+**Machine Learning:** I used regression (**Linear, Lasso, Random Forest**) to predict mobility from policy indicators, classification (**Logistic Regression, Random Forest**) to detect large drops, and clustering (**K-Means**) to find behavioral groups. For supervised models, I used a time-aware split (train on early months, test on later) to avoid leakage.
 
 The goal is to find statistical associations—not prove causation, since this is observational data.
 
 ---
 ## Expected Outcomes 
 - I expect that stronger government policies will be associated with larger mobility drops, especially in workplace and transit sectors. However, since people naturally resist being confined for long periods, I think compliance will weaken over time and mobility will start recovering even under restrictions. I also expect different countries to react on a diverse scale since every country has different culture, compliance norms, and trust in government.
+---
 
+## Key Findings
+1. All four hypotheses supported (p < 0.05)
+2. Policies explain ~24% of mobility variation (R² ≈ 0.24)
+3. Policy effects weakened from Phase 1 to Phase 3 (pandemic fatigue)
+4. Some countries reduced mobility voluntarily before strict mandates
+5. ***Bottom line:*** Policies matter, but people are more complex than what models can fully capture.
+---
+
+## Limitations
+- Observational data — correlation, not causation
+- Limited to 11 countries due to data quality
+---
+## Future Work
+As future work, if variables such as economic indicators or cultural context are added to the study with a higher count of countries, the findings may be able to predict mobility changes more accurately.
