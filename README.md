@@ -2,7 +2,7 @@
 
 **DSA210 Individual Project - Fall 2025-2026 - Sabancı University**
 
-*Prepared by : Ali Kaan Koç*
+Prepared by : Ali Kaan Koç - 33832 
 
 ---
 
